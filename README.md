@@ -1,8 +1,8 @@
 # kirby-storyline-bank
 
-*This skill is part of the [Kirby Skills Collection](https://github.com/markkirby125/kirby-skills-collection).*
+*This skill is part of the [Tiffany Lambert PLR Skills Collection](https://github.com/markkirby125/kirby-skills-tiff-collection).*
 
-A structured system for eliciting, structuring, cataloging, and retrieving personal business scars, client breakthroughs, and life lessons into a queryable Storyline Bank to anchor AI writing in authentic human experience.
+A structured system for eliciting, structuring, cataloguing, and retrieving personal business scars, client breakthroughs, and life lessons into a queryable Storyline Bank to anchor AI writing in authentic human experience.
 
 ## 🪄 The Magic Prompt
 
@@ -24,6 +24,5 @@ Copy and paste this directly to your AI (Cursor, Windsurf, Claude Code, Antigrav
 
 ## Tech Stack
 
-- **Format**: Markdown / JSON / YAML
-- **Architecture**: Tier 1/2 Single File Specification
+- **Format**: Markdown / JSON Storyline Schema
 - **Compatibility**: Antigravity, Claude Code, Cursor, Windsurf, Cline
