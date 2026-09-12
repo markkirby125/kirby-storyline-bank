@@ -11,40 +11,7 @@ triggers: [story-dataset, extract-stories, storyline-bank, personal-anecdotes, l
 
 ---
 
-## 1. The Need for Lived Experience in AI Writing
-
-AI models and raw PLR can easily generate plausible instructions, but they cannot manufacture **truthful vulnerability**. Readers immediately sense when an anecdote is synthetic or generic. 
-
-The **Storyline Bank** is a persistent repository of true micro-stories, categorized by emotional arc and business topics. When an agent rewrites content, it queries the bank for an exact matching memory, embedding genuine human proof into the narrative.
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                 Human Memory / Experience               │
-│          (Raw memories, client calls, past mistakes)    │
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│            Storyline Extraction Protocol                │
-│    (Interrogation: Trigger -> Arc -> Lesson -> Anchor)  │
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│                 Structured Storyline Bank               │
-│      (Tagged JSON/YAML entries ready for agent query)   │
-└────────────────────────────┬────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│               Dynamic Retrieval & Fusion                │
-│    (Matched to PLR topics in <kirby-plr-personalizer>)  │
-└─────────────────────────────────────────────────────────┘
-```
-
----
-
-## 2. The 4 Core Story Archetypes
+## 1. The 4 Core Story Archetypes
 
 Every entry in the Storyline Bank falls into one of four high-conversion archetypes:
 
@@ -70,7 +37,7 @@ Every entry in the Storyline Bank falls into one of four high-conversion archety
 
 ---
 
-## 3. Extraction Protocol: Socratic Prompts
+## 2. Extraction Protocol: Socratic Prompts
 
 When building a Storyline Bank with an operator, execute the following interrogation cycle across common topics:
 
@@ -85,7 +52,7 @@ Run this interview with the operator:
 
 ---
 
-## 4. Storyline Bank Entry Schema
+## 3. Storyline Bank Entry Schema
 
 Store all storylines in a centralized file `storyline_bank.json` or `.yaml` following this schema:
 
@@ -115,10 +82,20 @@ Store all storylines in a centralized file `storyline_bank.json` or `.yaml` foll
 
 ---
 
-## 5. Agent Query & Retrieval Instructions
+## 4. Agent Query & Retrieval Instructions
 
 When an agent needs a story for personalizing a piece of content:
 1. **Analyze Subject Matter:** Extract keywords and emotional triggers from the incoming content (e.g., `["email deliverability", "fear of hitting send"]`).
 2. **Scan Bank:** Search `storyline_bank.json` for matches against `topics` and `target_emotions`.
 3. **Select Best Match:** Pick the entry with the highest topical alignment.
 4. **Contextualize:** Use the `usable_snippets` and `narrative_beats` to seed the narrative anchor in `kirby-plr-personalizer`.
+
+---
+
+## 5. Verification Checklist
+
+Before considering a storyline extraction complete, verify:
+- [ ] Are all fields in the schema fully populated?
+- [ ] Does the `core_lesson` connect logically to a specific business topic?
+- [ ] Are there at least two `usable_snippets` capturing the author's distinct phrasing?
+- [ ] Has the entry been persisted to the `storyline_bank.json` file?
