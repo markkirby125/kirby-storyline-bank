@@ -1,6 +1,6 @@
 ---
 name: kirby-storyline-bank
-description: "Elicits, structures, catalogs, and retrieves personal business scars, client breakthroughs, and life lessons into a queryable Storyline Bank to anchor AI writing in authentic human experience."
+description: "Use when eliciting, cataloguing, or retrieving personal business scars and lessons into a storyline bank for PLR personalisation."
 category: writing
 triggers: [story-dataset, extract-stories, storyline-bank, personal-anecdotes, life-lessons-bank, experience-extractor]
 ---
