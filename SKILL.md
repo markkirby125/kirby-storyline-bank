@@ -3,6 +3,9 @@ name: kirby-storyline-bank
 description: "Use when eliciting, cataloguing, or retrieving personal business scars and lessons into a storyline bank for PLR personalisation."
 category: writing
 triggers: [story-dataset, extract-stories, storyline-bank, personal-anecdotes, life-lessons-bank, experience-extractor]
+risk: unverified
+author: william-fitzpatrick
+tags: [kirby, ai-agent, workflow]
 ---
 
 # SOP: Storyline Bank Extraction, Curation & Retrieval
@@ -99,3 +102,14 @@ Before considering a storyline extraction complete, verify:
 - [ ] Does the `core_lesson` connect logically to a specific business topic?
 - [ ] Are there at least two `usable_snippets` capturing the author's distinct phrasing?
 - [ ] Has the entry been persisted to the `storyline_bank.json` file?
+
+
+## Examples
+
+*(Add specific conversational examples here showing how the agent should behave.)*
+
+
+## Limitations (When NOT to Use)
+
+- Do not use this skill outside of its intended scope.
+- Stop and ask the user for clarification if the requirements are ambiguous.
