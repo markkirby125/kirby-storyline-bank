@@ -4,7 +4,7 @@ description: "Use when eliciting, cataloguing, or retrieving personal business s
 category: writing
 triggers: [story-dataset, extract-stories, storyline-bank, personal-anecdotes, life-lessons-bank, experience-extractor]
 risk: unverified
-author: william-fitzpatrick
+author: paul-kirby
 tags: [kirby, ai-agent, workflow]
 ---
 
