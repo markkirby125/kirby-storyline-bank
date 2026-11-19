@@ -98,3 +98,4 @@ Before considering a storyline extraction complete, verify:
 - [ ] Does the `core_lesson` connect logically to a specific business topic?
 - [ ] Are there at least two `usable_snippets` capturing the author's distinct phrasing?
 - [ ] Has the entry been persisted to the `storyline_bank.json` file?
+- [ ] Persona integrity: is each entry the named author's own experience (or a consented client story told as the client's), never another person's story retold as the author's?
